@@ -1,0 +1,20 @@
+#!/bin/bash
+
+num1=5
+num2=3
+
+addition=$(expr $num1 + $num2)
+
+subtraction=$(expr $num1 - $num2)
+
+division=$(expr $num1 / $num2)
+
+multiplication=$(expr $num1 \* $num2)
+
+echo "the addition of the two numbers is $addition."
+
+echo "the subtraction of the two numbers is $subtraction."
+
+echo "the division of the two numbers is $division."
+
+echo "the multiplication of the two numbers is $multiplication."
