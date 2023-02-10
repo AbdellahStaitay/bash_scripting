@@ -1,0 +1,20 @@
+#!/bin/bash
+
+myname="Abdellah"
+myage=24
+echo "My name is $myname, and My age is $myage."
+
+now=$(date)
+
+echo "the current date and time is : "
+
+echo $now
+
+echo "your username is $USER."
+
+
+
+
+
+
+
