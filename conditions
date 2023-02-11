@@ -1,0 +1,40 @@
+#!/bin/bash
+echo "enter a number : "
+read num
+
+if [ $num -eq 25 ]
+then 
+	echo "The condition is true. "
+else
+	echo "The condintion is false."	
+fi
+echo "Enter a text :"
+read text
+
+if [ $text != "Abdellah" ]
+then
+	echo "The name isn't correct."
+else
+	echo "The name is correct (Abdellah)."
+fi
+
+if [ -f hello_world ]
+then
+	echo "file exist."
+else
+	echo "file doesn't exist."	
+fi
+
+echo "Enter your command."
+
+read command
+
+if command -v $command
+then
+	echo "command does exist, let's explore it."
+	man $command
+else
+	echo "command does not exist, let's install it."
+	sudo apt update && sudo apt install -y $command
+fi	
+
