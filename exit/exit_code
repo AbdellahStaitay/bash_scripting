@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "Enter a package you want to install :"
+read package
+
+sudo apt install -y $package >> installation_succes.log
+
+if [ $? == 0 ]
+then
+	echo "installation completed succefully."
+	echo "The new command is availlable here :"
+	which $package
+else
+	echo "installation failed." >> installation_failure.log
+fi
+
+echo "Enter a directory :"
+
+read dir
+
+if [ -d $dir ]
+then
+	echo "The $dir directory exists."
+	exit 0
+else
+       	echo "The $dir directory doesn't exist."
+	exit 1
+fi
+
+echo "you won't see this statement."
+echo "and nor this one."
